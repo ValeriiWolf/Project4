@@ -8,7 +8,7 @@ extern  int Perenosc;
 extern  int Perenosd;
 
 int main()
-{/*
+{
     int a, b, c, d;
     cout << "Enter an integer a" << endl;
     cin >> a;
@@ -25,16 +25,15 @@ int main()
     int ternar;
     ternar = a <= 21 ? 21 - a : (a - 21) << 1;
     cout << ternar << endl;
-*/
+
     const unsigned int SIZE2 = 3;
     int Array1[SIZE2][SIZE2][SIZE2] = {};
-    int *pArr = nullptr;
-    //pArr = &Array1[1][1][1];
-    pArr = &Array1[0][0][0];
-    pArr[1][1][1] = 10;
-    //*pArr = 10;
+    int *pArr = &Array1[0][0][0];
+
+    pArr += sizeof (int)*3+1;
+    *pArr = 10;
     cout << *pArr << endl; 
-    //cout << Array1[1][1][1] << endl;
+    cout << Array1[1][1][1] << endl;
 
    
     float Schet2;
