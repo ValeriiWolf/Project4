@@ -28,12 +28,12 @@ int main()
 
     const unsigned int SIZE2 = 3;
     int Array1[SIZE2][SIZE2][SIZE2] = {};
-    int pArr;
-    pArr = & Array1[1][1][1];// в чем ошибка?
-    //pArr = &Array1[0][0][0];
-    //pArr[1][1][1] = 10;
+    int *pArr;
+    //pArr = &Array1[1][1][1];
+    pArr = &Array1[0][0][0];
+    pArr[1][1][1] = 10;
     //cout << *pArr[1][1][1] << endl; 
-    //cout << Array1[1][1][1] << endl;
+    cout << Array1[1][1][1] << endl;
     
     //int *pArr;//= nullptr;
 
